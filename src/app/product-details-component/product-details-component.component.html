@@ -1,0 +1,20 @@
+<div class="container product-details-container">
+  <h1>Product Details</h1>
+
+  <div class="card" style="width: 18rem;">
+    <img [src]="product?.image" class="card-img-top" alt="{{ product?.name }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ product?.name }}</h5>
+      <p class="card-text">
+        Cuisine: {{ product?.cuisine }}<br>
+        Difficulty: {{ product?.difficulty }}<br>
+        Rating: {{ product?.rating }} ({{ product?.reviewCount }} reviews)<br>
+        Prep Time: {{ product?.prepTimeMinutes }} minutes<br>
+        Cook Time: {{ product?.cookTimeMinutes }} minutes
+      </p>
+      <p>Product ID: {{ productId }}</p>
+      <a href="/" class="btn btn-danger">Go to Home</a>
+    </div>
+  </div>
+</div>
+

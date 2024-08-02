@@ -1,0 +1,85 @@
+.aboutcontainer {
+    
+    background-image: url('https://wallpaperaccess.com/full/3014596.jpg');
+  
+    height: 100vh;
+    .menue-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100vh;
+        .left-menue {
+            width: 50%;
+            .whitebg {
+                color: #000;
+                display: inline-block;
+                font-family: KGHappy;
+                text-align: center;
+                background-color: #fff;
+                position: absolute;
+                width: 30%;
+
+
+                p {
+                    font-size: 50px;
+                    line-height: 76px;
+                    display: inline-block;
+                    margin-bottom: 0;
+                    padding: 15px;
+                    white-space: nowrap;
+                }
+
+            }
+
+            .banner-nav {
+                position: absolute;
+                margin-top: 130px;
+                
+                display: flex;
+                width: 600px;
+                gap: 2px;
+
+                .box {
+                    background-color: rgb(170, 0, 0);
+                    width: 30%;
+                    text-align: center;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    transition: all 0.4s ease;
+
+
+                    transition: background-color 0.4s ease;
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        text-align: center;
+                        font-size: 22px;
+                    }
+                }
+
+                .box:hover {
+                    background-color: white;
+                    border: 1px solid rgb(170, 0, 0) !important;
+
+                    a {
+                        color: rgb(170, 0, 0);
+                    }
+                }
+            }
+        }
+        .img-wraaper {
+            width: 45%;
+            border: 20px solid white;
+            img {
+                width: 130%;
+                height: 560px;
+                object-fit: cover;
+            }
+        }
+    }
+}
