@@ -1,0 +1,25 @@
+<div class="container logincontainer">
+    <form class="form-container" (ngSubmit)="onSubmit()" #myform="ngForm">
+        <h1>Login</h1>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" name="email" ngModel required #emailinput="ngModel" class="form-control" id="email"
+                aria-describedby="emailHelp" email>
+
+            <span *ngIf="emailinput.invalid && emailinput.touched">Please input a valid email</span>
+
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" [(ngModel)]="password" #passwordinput="ngModel"
+                [pattern]="passwordPattern" class="form-control" id="password" required>
+                <span *ngIf="passwordinput.errors?.['required'] && passwordinput.touched">Password is required</span>
+                <span *ngIf="passwordinput.errors?.['pattern']">
+                  Password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, a digit, 
+                  and a special character
+                </span>
+        </div>
+        <p class="backto">Don't have an account? <a routerLink="/register">Register</a></p>
+        <button type="submit" class="btn btn-danger" [disabled]="!myform.valid">Login</button>
+    </form>
+</div>

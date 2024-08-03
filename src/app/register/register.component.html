@@ -1,0 +1,68 @@
+
+<div class="container logincontainer">
+    <form class="form-container" [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+      <h1>Register</h1>
+      <div class="email-phone">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required formControlName="email">
+            <div><span *ngIf="!reactiveForm.get('email').valid && reactiveForm.get('email').touched">The email you entered is not valid</span></div>
+          </div>
+      
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" required formControlName="phoneNumber">
+            <div><span *ngIf="!reactiveForm.get('phoneNumber').valid && reactiveForm.get('phoneNumber').touched">The phone number you entered is not valid</span></div>
+          </div>
+      
+
+      </div>
+    
+      <div formArrayName="addresses">
+        <div *ngFor="let address of addresses.controls; let i = index" [formGroupName]="i" class="mb-3">
+          <label for="address{{i}}" class="form-label">Address {{i + 1}}</label>
+          <input type="text" class="form-control" id="address{{i}}" formControlName="address">
+          <div><span *ngIf="!address.get('address').valid && address.get('address').touched">Address is required and must contain letters and may contain numbers</span></div>
+  
+          <label for="street{{i}}" class="form-label">Street</label>
+          <input type="text" class="form-control" id="street{{i}}" formControlName="street">
+          <div><span *ngIf="!address.get('street').valid && address.get('street').touched">Street is required and must contain letters and may contain numbers</span></div>
+  
+          <label for="country{{i}}" class="form-label">Country</label>
+          <input type="text" class="form-control" id="country{{i}}" formControlName="country" required>
+          <div><span *ngIf="!address.get('country').valid && address.get('country').touched">Country is required and must contain letters only</span></div>
+  
+          <label for="city{{i}}" class="form-label">City</label>
+          <input type="text" class="form-control" id="city{{i}}" formControlName="city" required>
+          <div><span *ngIf="!address.get('city').valid && address.get('city').touched">City is required and must contain letters only</span></div>
+        <div class="remove-add-btn">
+            <button type="button" class="btn btn-danger mt-2 remvebtn" (click)="removeAddress(i)">Remove Address</button>
+            <button type="button" class="btn btn-secondary addbtn" (click)="addAddress()">Add Address</button>
+        </div>
+        
+        </div>
+      </div>
+  
+     
+  
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" required formControlName="password">
+        <div><span *ngIf="!reactiveForm.get('password').valid && reactiveForm.get('password').touched">Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character</span></div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" required formControlName="confirmPassword">
+        <div><span *ngIf="!reactiveForm.get('confirmPassword').valid && reactiveForm.get('confirmPassword').touched">Passwords do not match</span></div>
+      </div>
+  
+     
+      <div class="sign-up-btn">
+        <p class="backto">Have an account? <a routerLink="/login">Login</a></p>
+        <button type="submit" class="btn btn-danger" [disabled]="reactiveForm.invalid">Sign up</button>
+      </div>
+     
+    </form>
+  </div>
+  
