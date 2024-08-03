@@ -1,35 +1,57 @@
-.logincontainer {
+.registercontainer {
     min-height: 500px;
-    h1 {
-        text-align: center;
-    }
-    .email-phone{
-        display: flex;
-        justify-content:space-evenly;
-        align-items: center;
-        gap: 20px;
-       
-    }
-    .remove-add-btn {
-       
-        padding: 10px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        .addbtn {
-          margin-top: 5px;
-          padding: 7px 20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 70vh;
+    font-size: 0.7rem;
+    margin-top: 30px;
+    .form-container {
+        
+        width: 80%;
+        
+        background-color: rgb(231, 231, 231);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        .backto a {
+            text-decoration: underline;
+            color: rgb(170,0,0);
+        }
+        h1 {
+            text-align: center;
+        }
+        .email-phone{
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            gap: 20px;
+           
+        }
+        .remove-add-btn {
+           
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            .addbtn {
+              margin-top: 5px;
+              padding: 7px 20px ;
+            }
+            
+        }
+        .sign-up-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        span {
+            color: red;
         }
         
     }
-    .sign-up-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    span {
-        color: red;
-    }
+    
 }

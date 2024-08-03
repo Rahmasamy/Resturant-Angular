@@ -1,5 +1,30 @@
+
 .logincontainer {
-    span {
-        color: red;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    .form-container {
+        display: flex;
+        width: 350px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(231, 231, 231);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        .backto a {
+            text-decoration: underline;
+            color: rgb(170,0,0);
+        }
+        h1 {
+            text-align: center;
+        }
+        span {
+            color: red;
+        }
     }
 }
