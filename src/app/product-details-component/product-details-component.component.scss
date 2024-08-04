@@ -1,21 +1,69 @@
-.product-details-container {
+.product-details-container{
+    background-image: url('https://www.phocafe.co.uk/wp-content/uploads/2018/06/Hero-Image-1.jpg');
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center !important;
-    align-items: center;
-    flex-direction: column;
-    h1 {
-        color: rgb(170,0,0);
-    }
-    gap: 20px;
-    .card {
-        width: 30% !important;
-        height: 670px !important;
+    .container {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column;
         
-        .card-body {
-            text-align: center;
+      
+      
+        h1 {
+            color: rgb(170,0,0);
+            text-shadow: 2px 2px 2px rgb(255, 255, 255);
         }
+        gap: 20px;
+        .card {
+    
+            width: 70% !important;
+            display: flex;
+            flex-direction: row;
+            .left-img {
+                width: 45%;
+            }
+            .card-body {
+                text-align: center;
+                width: 45%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .plus-minus {
+                    display: flex;
+                    background-color: rgb(211, 211, 211);
+                    justify-content: space-evenly !important;
+                    align-items: center !important;
+                    width: 40%;
+                    color: white;
+                    padding: 10px 0;
+                    border-radius: 20px;
+                    margin: 20px;
+                    .fa-plus {
+                       width: 30%;
+                    }
+                    .fa-minus {
+                    width: 30%;
+                    }
+                }
+                .backward-addTocart {
+                    display: flex;
+                    justify-content: space-evenly;
+                    gap: 20px;
+                    button {
+                        background-color:  #dc3545;
+                        color: white;
+                        border-radius: 12px;
+                        border: none;
+                        padding: 7px 10px;
+                    }
+                }
+            }
+        }
+    
     }
-
 }
+

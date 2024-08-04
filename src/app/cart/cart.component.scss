@@ -1,0 +1,47 @@
+.cart-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://www.phocafe.co.uk/wp-content/uploads/2018/06/Hero-Image-1.jpg');
+    flex-direction: column;
+    .container {
+          background-color: rgba(255, 228, 196, 0.363);
+          width: 80%;
+          display: flex;
+          justify-content: flex-start !important;
+          align-items: center !important;
+          flex-direction: column;
+          min-height: 70%;
+          margin-top: 6rem;
+          padding: 30px 0;
+          h1 {
+            color: rgb(170,0,0);
+            text-shadow: 2px 2px 2px rgb(255, 255, 255);
+        }
+          table {
+            width: 80%;
+            i {
+                 cursor: pointer;
+            }
+            .plus-minus {
+                display: flex;
+                background-color: rgb(206, 2, 2);
+                justify-content: space-evenly !important;
+                align-items: center !important;
+                width: 80%;
+                color: white;
+                padding: 10px 0;
+                border-radius: 20px;
+                .fa-plus {
+                   width: 30%;
+                }
+                .fa-minus {
+                width: 30%;
+                }
+            }
+          }
+         
+    }
+}

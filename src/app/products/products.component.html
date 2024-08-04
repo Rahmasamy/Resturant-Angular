@@ -1,18 +1,21 @@
-<div class="container">
-  <h1>Our Products</h1>
-  <div class="cards-container">
-    <div class="card" *ngFor="let product of products" style="width: 18rem;">
-      <img [src]="product.image" class="card-img-top" alt="{{product.name}}">
-      <div class="card-body">
-        <h5 class="card-title">{{ product.name }}</h5>
-        <p class="card-text">Cuisine: {{ product.cuisine }}<br>
-          Difficulty: {{ product.difficulty }}<br>
-          Rating: {{ product.rating }} ({{ product.reviewCount }} reviews)
-        </p>
-        <div class="viewdetails-container">
-          <a  class="btn btn-danger"  [routerLink]="['/product', product.id] "(click)="viewDetails(product.id)">View Details  <i class="fas fa-shopping-cart"></i></a> 
+<div class="products-container">
+  <div class="container ">
+    <h1>Our Products</h1>
+    <div class="cards-container">
+      <div class="card" *ngFor="let product of products" style="width: 18rem;">
+        <i class="fas fa-shopping-bag"> <span> {{product.quantity}} </span></i>
+        <img [src]="product.image" class="card-img-top" alt="{{product.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">Cuisine: {{ product.cuisine }}<br>
+            Difficulty: {{ product.difficulty }}<br>
+            Rating: {{ product.rating }} ({{ product.reviewCount }} reviews)
+          </p>
+          <div class="viewdetails-container">
+            <a  class="btn btn-danger"  [routerLink]="['/product', product.id] "(click)="viewDetails(product.id)">View Details  <i class="fas fa-shopping-cart"></i></a> 
+          </div>
+          
         </div>
-        
       </div>
     </div>
   </div>

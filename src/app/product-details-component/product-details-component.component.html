@@ -1,20 +1,37 @@
-<div class="container product-details-container">
-  <h1>Product Details</h1>
 
-  <div class="card" style="width: 18rem;">
-    <img [src]="product?.image" class="card-img-top" alt="{{ product?.name }}">
-    <div class="card-body">
-      <h5 class="card-title">{{ product?.name }}</h5>
-      <p class="card-text">
-        Cuisine: {{ product?.cuisine }}<br>
-        Difficulty: {{ product?.difficulty }}<br>
-        Rating: {{ product?.rating }} ({{ product?.reviewCount }} reviews)<br>
-        Prep Time: {{ product?.prepTimeMinutes }} minutes<br>
-        Cook Time: {{ product?.cookTimeMinutes }} minutes
-      </p>
-      <p>Product ID: {{ productId }}</p>
-      <a href="/" class="btn btn-danger">Go to Home</a>
+<div class="product-details-container">
+  <div class="container">
+    <h1>Product Details</h1>
+  
+    <div class="card" style="width: 18rem;">
+      <div class="left-img">
+        <img [src]="product?.image" class="card-img-top" alt="{{ product?.name }}">
+      </div>
+      
+      <div class="card-body">
+        <h5 class="card-title">{{ product?.name }}</h5>
+        <p class="card-text">
+          Cuisine: {{ product?.cuisine }}<br>
+          Difficulty: {{ product?.difficulty }}<br>
+          Rating: {{ product?.rating }} ({{ product?.reviewCount }} reviews)<br>
+          Prep Time: {{ product?.prepTimeMinutes }} minutes<br>
+          Cook Time: {{ product?.cookTimeMinutes }} minutes
+        </p>
+        <p>Product ID: {{ productId }}</p>
+        <div class="plus-minus">
+          <i class="fa-solid fa-plus" (click)="increaseQuantity()"></i>
+          <i class="fa-solid fa-minus" (click)="decreaseQuantity()"></i>
+      </div>
+        <div class="backward-addTocart">
+          <a routerLink="/products" class="btn btn-danger"> <i class="fa-solid fa-backward"></i></a>
+
+          <button (click)="addToCart()" > Add To Cart</button>
+        </div>
+        
+      </div>
     </div>
   </div>
+  
 </div>
+
 
