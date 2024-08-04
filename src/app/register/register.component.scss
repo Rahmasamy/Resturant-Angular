@@ -1,12 +1,16 @@
+
+
+
 .registercontainer {
     min-height: 500px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 80%;
-    height: 70vh;
-    font-size: 0.7rem;
-    margin-top: 30px;
+    height: 60vh;
+   
+    
+    margin-top: 5rem !important;
     .form-container {
         
         width: 80%;
